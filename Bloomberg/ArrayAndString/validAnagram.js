@@ -12,7 +12,7 @@ Approach:
 
 */
 
-//solution1
+//solution1 (116ms)
 
 const isAnagram = function(s,t){
   if(s.length !== t.length){
