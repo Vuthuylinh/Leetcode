@@ -1,8 +1,8 @@
 /*
 Three Sum
-Given an array nums of n integers, are three elements a,b,c in nums such that a+b+c =0? Find all unique trinlets in the array which gives the sum of zero
+Given an array (nums) of n integers, are three elements a,b,c in nums such that a+b+c =0? Find all unique triplets in the array which gives the sum of zero
 
-Notice: the solution set mush not contain dubplicate triplets
+Notice: the solution set mush not contain duplicate triplets
 
 Example:
   Input: nums = [-1,0,1,2,-1,-4] , target =0
@@ -31,7 +31,7 @@ sum = element +arr[left] + arr[right]
 i=1
 
 
-Approach1: use 3 pointers for 3 numbers
+Approach1: use 3 pointers for 3 numbers - Time O(n^2)| O(n) space
  - create an empty array to keep results =[]
  - sort array
  - 1st pointer for the outer for loop
@@ -77,3 +77,6 @@ function threeSum(arr,targetSum){
  }
  return results
 }
+
+
+//Approach 2: Memoization
