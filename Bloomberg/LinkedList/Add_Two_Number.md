@@ -82,3 +82,37 @@
     return sumList.next
   }
 ```
+# Solution2
+```js
+function addTwoNumbers(l1,l1){
+let node1=l1
+    let node2 = l2
+
+    let currentNode= new ListNode(0)
+    let sumList= currentNode
+    let sum=0
+   while(node1 !==null || node2 !==null){
+       if(node1!==null){
+           sum+=node1.val
+           node1= node1.next
+       }
+       if(node2!==null){
+           sum += node2.val
+           node2 = node2.next
+       }
+
+       let newValue= sum%10
+       let newNode = new ListNode(newValue)
+       currentNode.next = newNode
+       currentNode = currentNode.next
+       sum= sum>9? 1:0
+
+   }
+    if(sum){
+        currentNode.next=new ListNode(sum)
+    }
+
+    return sumList.next;
+};
+```
+
