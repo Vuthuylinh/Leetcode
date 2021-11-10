@@ -64,3 +64,24 @@ add the node to head, move the head along
    return dummyHead.next;
  }
  ```
+
+# Approach 2:
+- iterate the input linked list to revese along the way
+- manipulate 3 nodes: currentNode, prevNode, and next Node as the same time in each step
+
+## Solution2:
+```js
+ funtion reverseLinkedList(){
+   let prevNode= null
+   let currentNode=head
+   while(currentNode!==null){
+     let nextNode = currentNode.next
+       currentNode.next= prevNode
+       prevNode = currentNode
+       currentNode= nextNode
+   }
+   return prevNode
+ }
+```
+
+
