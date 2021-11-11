@@ -60,12 +60,20 @@ function threeSum(arr,targetSum){
  arr.sort((a,b)=> a-b)
  for(let i=0; i<arr.length; i++){
    let currentElement= arr[i]
+   if(currentElement>targetSum) break
+	if(i>0 && arr[i]===arr[i-1]) continue
    let left =i+1;
    let right =arr.length-1
    while(left<right){
      let sum = currentElement+arr[left]+arr[right]
      if(sum === targetSum){
        results.push(currentElement, arr[left], arr[right])
+       while(left<right &&arr[left]===arr[left+1]){
+        left+=1
+      }
+      while(left<right &&arr[right]===arr[right-1]){
+          right-=1
+      }
        left++
        right--
      }else if(sum<targetSum){
